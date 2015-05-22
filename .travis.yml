@@ -3,10 +3,13 @@ python:
   - "3.4"
   - "2.7"
 env:
-  - DJANGO=1.7
+  - DJANGO=1.7.8
   - DJANGO=1.8
 install:
   - pip install -q Django==$DJANGO --use-mirrors
   - pip install -r requirements-tests.txt --use-mirrors
+  - pip install coveralls
 script:
-  - python setup.py test
+  - coverage run --source=twitter_feed setup.py test
+after_success:
+  - coveralls
