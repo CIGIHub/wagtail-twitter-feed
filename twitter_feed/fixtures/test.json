@@ -12,5 +12,61 @@
     },
     "model": "twitter.user",
     "pk": 1
+  },
+  {
+    "fields": {
+      "account": "twitter",
+      "hide": false,
+      "text": "This is a tweet.",
+      "profile_image_url": "https://pbs.twimg.com/profile_images/571076061169868800/2dDdk-Uh_normal.png",
+      "tweet_id": 601531916840341504,
+      "user": 1,
+      "time": "2015-05-21T23:35:59Z",
+      "processed_text": "This is a tweet."
+    },
+    "model": "twitter.tweet",
+    "pk": 1
+  },
+  {
+    "fields": {
+      "account": "twitter",
+      "hide": false,
+      "text": "A second tweet.",
+      "profile_image_url": "https://pbs.twimg.com/profile_images/571076061169868800/2dDdk-Uh_normal.png",
+      "tweet_id": 601502648756383745,
+      "user": 1,
+      "time": "2015-05-21T21:39:41Z",
+      "processed_text": "A second tweet."
+    },
+    "model": "twitter.tweet",
+    "pk": 2
+  },
+  {
+    "fields": {
+      "account": "twitter",
+      "hide": false,
+      "text": "A third tweet.",
+      "profile_image_url": "https://pbs.twimg.com/profile_images/571076061169868800/2dDdk-Uh_normal.png",
+      "tweet_id": 601070776062648321,
+      "user": 1,
+      "time": "2015-05-20T17:03:35Z",
+      "processed_text": "A third tweet."
+    },
+    "model": "twitter.tweet",
+    "pk": 3
+  },
+  {
+    "fields": {
+      "account": "twitter",
+      "hide": false,
+      "text": "And a fourth for good measure.",
+      "profile_image_url": "https://pbs.twimg.com/profile_images/571076061169868800/2dDdk-Uh_normal.png",
+      "tweet_id": 600728701584576512,
+      "user": 1,
+      "time": "2015-05-19T18:24:18Z",
+      "processed_text": "And a fourth for good measure."
+    },
+    "model": "twitter.tweet",
+    "pk": 4
   }
 ]

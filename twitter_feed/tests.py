@@ -2,9 +2,10 @@ from __future__ import absolute_import
 
 from django.test import TestCase
 from django.core.urlresolvers import reverse
+from django.template import TemplateSyntaxError
 from twitter import models as twitter_models
 from wagtail.tests.utils import WagtailTestUtils
-
+from twitter_feed.templatetags import twitter_tags
 
 
 class TestTwitterFeedCreateView(TestCase, WagtailTestUtils):
@@ -115,3 +116,23 @@ class TestTwitterFeedDelete(TestCase, WagtailTestUtils):
 
         # Check that the page is gone
         self.assertEqual(twitter_models.User.objects.filter(screen_name='twitter').count(), 0)
+
+
+class TestLatestTweetsTemplateTag(TestCase):
+    fixtures = ['test.json']
+
+    def test_get_tweets_valid_number(self):
+        tweets = twitter_tags.latest_tweets(2)
+        self.assertEqual(len(tweets), 2)
+
+    def test_get_tweets_not_a_number_raises_error(self):
+        # tweets = twitter_tags.latest_tweets("Five")
+        self.assertRaisesMessage(TemplateSyntaxError, "Tag latest_tweets requires a single positive integer argument, given 'Five'.", twitter_tags.latest_tweets, "Five")
+
+    def test_get_more_tweets_then_exist_returns_all(self):
+        tweets = twitter_tags.latest_tweets(200)
+        self.assertEqual(len(tweets), twitter_models.Tweet.objects.all().count())
+
+
+    def test_get_tweets_negative_number_raises_error(self):
+        self.assertRaisesMessage(TemplateSyntaxError, "Tag latest_tweets requires a single positive integer argument, given -1.", twitter_tags.latest_tweets, -1)
