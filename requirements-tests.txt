@@ -1,0 +1,4 @@
+# Minimal requirements
+wagtail==1.0b2
+
+git+https://github.com/CIGIHub/tweet_cache.git
