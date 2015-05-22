@@ -30,7 +30,7 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Base URL to use when referring to full URLs within the Wagtail admin backend -
+# Base URL to use when referring to full URLs within the Wagtail admin backend
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://example.org'
 
@@ -143,7 +143,6 @@ LOGIN_REDIRECT_URL = 'wagtailadmin_home'
 
 WAGTAIL_SITE_NAME = "test"
 
-# Whether to use face/feature detection to improve image cropping - requires OpenCV
 WAGTAILIMAGES_FEATURE_DETECTION_ENABLED = False
 
 TWITTER_CONSUMER_KEY = ''

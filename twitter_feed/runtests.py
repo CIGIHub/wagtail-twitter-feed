@@ -1,7 +1,9 @@
-import os, sys
+import os
+import sys
+
 import django
-from django.test.utils import get_runner
 from django.conf import settings
+from django.test.utils import get_runner
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "twitter_feed.test_settings")
 django.setup()
