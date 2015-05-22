@@ -133,6 +133,5 @@ class TestLatestTweetsTemplateTag(TestCase):
         tweets = twitter_tags.latest_tweets(200)
         self.assertEqual(len(tweets), twitter_models.Tweet.objects.all().count())
 
-
     def test_get_tweets_negative_number_raises_error(self):
         self.assertRaisesMessage(TemplateSyntaxError, "Tag latest_tweets requires a single positive integer argument, given -1.", twitter_tags.latest_tweets, -1)
