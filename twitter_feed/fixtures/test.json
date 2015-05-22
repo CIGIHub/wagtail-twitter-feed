@@ -1,0 +1,16 @@
+[
+  {
+    "fields": {
+      "updated": "2015-05-22T18:58:20.292Z",
+      "user_id": "",
+      "screen_name": "twitter",
+      "created": "2015-05-22T18:58:20.292Z",
+      "capture_analytics": false,
+      "active": true,
+      "capture_tweets": true,
+      "current_followers": 0
+    },
+    "model": "twitter.user",
+    "pk": 1
+  }
+]
