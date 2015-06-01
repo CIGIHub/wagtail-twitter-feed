@@ -1,0 +1,4 @@
+include LICENSE
+include README.md
+include requirements-tests.txt
+recursive-include twitter_feed/fixtures *
